@@ -62,12 +62,19 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 60px;
 }
 .contents p {
   font-size: 15px;
   padding-top: 40px;
+}
+@media (max-width: 1103px) {
+  .contents {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40%;
+  }
 }
 
 .item {

@@ -1,13 +1,8 @@
-window.onload = () => {
-    let button = document.querySelector("#btn");
-    button.addEventListener("click", calculateBMI);
-};
-  
 function calculateBMI() {
 
-    let height = parseInt(document.querySelector("#height").value);
-    let weight = parseInt(document.querySelector("#weight").value);
-    let result = document.querySelector("#result");
+    const height = parseInt(document.querySelector("#height").value);
+    const weight = parseInt(document.querySelector("#weight").value);
+    const result = document.querySelector("#result");
   
     if (height === "" || isNaN(height)) 
         result.innerHTML = "Podaj swój wzrost!";
@@ -42,3 +37,6 @@ function calculateBMI() {
         else result.innerHTML = `Otyłość skrajna : <span>${bmi}</span>`;
     }
 }
+
+const button = document.querySelector("#btn");
+    button.addEventListener("click", calculateBMI);
